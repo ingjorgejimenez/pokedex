@@ -1,0 +1,70 @@
+p {
+  margin: 0;
+}
+
+.Card {
+  opacity: 0.95;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: white;
+  /* border: 3px solid #FF0000; */
+  /* border: 6px solid #f5e97e; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 10px;
+  transition: 1s all;
+  /* cursor: pointer; */
+}
+
+.Card:hover {
+  /* border-color: #ff0000; */
+  transform: scale(1.1);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.Card__img {
+  display: flex;
+  align-self: center;
+}
+
+.Card__img img {
+  width: 137px;
+}
+
+.Card__name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.Card__types {
+  display: flex;
+  justify-content: center;
+}
+
+.Card__type {
+  padding: 5px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.Card__info {
+  margin-left: 10px;
+}
+
+.Card__data {
+  padding-bottom: 10px;
+}
+
+.Card__data .title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ability {
+  text-transform: capitalize;
+}
