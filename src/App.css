@@ -85,14 +85,18 @@
   justify-content: center;
 }
 
-img {
-  height: 16em;
-}
-
 input {
   box-sizing: border-box;
   font-size: 2rem;
   padding: 1rem;
   display: block;
   margin: 2rem auto;
+}
+p,
+h1,
+h2,
+a,
+h3,
+span {
+  font-family: "Shippori Antique B1", sans-serif;
 }
