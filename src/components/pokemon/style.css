@@ -30,13 +30,19 @@ p {
 }
 
 .Card__img img {
-  width: 137px;
+  margin-top: -30px;
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  background-color: #0000009e;
+  border-radius: 10px;
 }
 
 .Card__name {
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
+  color: white;
 }
 
 .Card__types {
@@ -49,14 +55,20 @@ p {
   margin: 10px 10px 10px 0;
   border-radius: 5px;
   color: #fff;
+  border: 1px solid #0000007d;
 }
 
 .Card__info {
   margin-left: 10px;
+  display: none;
 }
 
 .Card__data {
   padding-bottom: 10px;
+}
+.Card__data .ability {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Card__data .title {
@@ -67,4 +79,8 @@ p {
 
 .ability {
   text-transform: capitalize;
+}
+.Card_num {
+  /* text-align: right; */
+  color: white;
 }
