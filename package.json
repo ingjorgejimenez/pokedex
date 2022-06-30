@@ -2,12 +2,14 @@
   "name": "pokedex",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ingjorgejimenez.github.io/pokedex",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
+    "gh-pages": "^4.0.0",
     "history": "^5.3.0",
     "jquery": "^3.6.0",
     "react": "^18.2.0",
@@ -21,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
