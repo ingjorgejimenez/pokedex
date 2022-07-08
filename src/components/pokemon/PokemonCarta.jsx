@@ -31,46 +31,48 @@ function PokemonCarta({ pokemon }) {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
             >
-                <Modal.Header closeButton>
-                    <Modal.Title>{pokeName}</Modal.Title>
+                <div style={{ backgroundColor: pokemonTypeColors[pokemon.types[0].type.name] }} >
+                    <Modal.Header closeButton>
+                        <Modal.Title className='text-uppercase'>{pokeName}</Modal.Title>
 
-                </Modal.Header>
-                <Modal.Body className="poke-content">
-                    <img src={pokeImg} class="img-fluid img-height" alt="Responsive image"></img>
+                    </Modal.Header>
+                    <Modal.Body className="poke-content">
+                        <img src={pokeImg} class="img-fluid img-height" alt="Responsive image"></img>
 
-                    <p>
-                        Weight : {pokeWeight}
-                    </p>
+                        <p>
+                            Weight : {pokeWeight}
+                        </p>
 
-                    <div className={"Card__infoD" + " jd" + pokemon.id}>
-                        <div className="Card__data">
-                            <p className="title">Peso</p>
-                            <p>{parseFloat(pokeWeight * 0.1).toFixed(1)}Kg</p>
-                        </div>
-                        <div className="Card__data">
-                            <p className="title">Altura</p>
-                            <p>{parseFloat(pokeHeight * 0.1).toFixed(1)}m</p>
-                        </div>
-                        <div className="Card__data">
-                            <p className="title">Habilidades</p>
-                            {
-                                pokemon.abilities.map(abilities => {
-                                    return (
-                                        <p className="ability">{abilities.ability.name}</p>
-                                    )
-                                })
-                            }
-                            <p className="ability">{pokemon.abilities[0].ability.name}</p>
-                        </div>
-                        <div className="Card__data">
-                            <span className="title">Estadistica</span>
-                            <div className='nd-estadistica'>
-                                <Estadistica pokemon={pokemon} />
+                        <div className={"Card__infoD" + " jd" + pokemon.id}>
+                            <div className="Card__data">
+                                <p className="title">Peso</p>
+                                <p>{parseFloat(pokeWeight * 0.1).toFixed(1)}Kg</p>
+                            </div>
+                            <div className="Card__data">
+                                <p className="title">Altura</p>
+                                <p>{parseFloat(pokeHeight * 0.1).toFixed(1)}m</p>
+                            </div>
+                            <div className="Card__data">
+                                <p className="title">Habilidades</p>
+                                {
+                                    pokemon.abilities.map(abilities => {
+                                        return (
+                                            <p className="ability">{abilities.ability.name}</p>
+                                        )
+                                    })
+                                }
+                                <p className="ability">{pokemon.abilities[0].ability.name}</p>
+                            </div>
+                            <div className="Card__data">
+                                <span className="title">Estadistica</span>
+                                <div className='nd-estadistica'>
+                                    <Estadistica pokemon={pokemon} />
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </Modal.Body>
+                    </Modal.Body>
+                </div>
             </Modal>
 
             <div className="col-lg-3 col-md-4 col-sm-6-12" key={pokemon.id} onClick={() => handleClick(pokemon)} >

@@ -84,3 +84,17 @@ p {
   /* text-align: right; */
   color: white;
 }
+.modal {
+  background: #0006;
+}
+.modal-header {
+  border: none;
+}
+.poke-content img {
+  margin-top: -30px;
+  width: 30%;
+  height: auto;
+  object-fit: scale-down;
+  background-color: #0000009e;
+  border-radius: 10px;
+}
