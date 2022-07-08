@@ -76,10 +76,9 @@ function App() {
 
   return (
     <>
+      <Navbar />
       {loading ? <h1>Loading...</h1> : (
         <>
-
-          <Navbar />
           <div className="btn">
             <button className='btn btn-primary mx-2' onClick={prev}>Prev</button>
             <button className='btn btn-warning mx-2' onClick={next}>Next</button>
@@ -99,10 +98,11 @@ function App() {
             <button className='btn btn-primary mx-2' onClick={prev}>Prev</button>
             <button className='btn btn-warning mx-2' onClick={next}>Next</button>
           </div>
-          <Footer />
+
 
         </>
       )}
+      <Footer />
     </>
   );
 
